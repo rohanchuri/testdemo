@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMapNode url="default.aspx" title="新书推荐" description="">
+  <siteMapNode title=" C#" url="BookList.aspx?typeid=1" description="" />
+  <siteMapNode title=".NET" url="BookList.aspx?typeid=25" description="" />
+  <siteMapNode title="ASP.NET" url="BookList.aspx?typeid=29" description="" />
+  <siteMapNode title="Basic VB VB Script" url="BookList.aspx?typeid=16" description="" />
+  <siteMapNode title="C C++ VC VC++" url="BookList.aspx?typeid=15" description="" />
+  <siteMapNode title="CSS Div" url="BookList.aspx?typeid=4" description="" />
+  <siteMapNode title="HTML XML" url="BookList.aspx?typeid=22" description="" />
+  <siteMapNode title="J2EE" url="BookList.aspx?typeid=2" description="" />
+  <siteMapNode title="Java Script Java" url="BookList.aspx?typeid=21" description="" />
+  <siteMapNode title="JSP" url="BookList.aspx?typeid=31" description="" />
+  <siteMapNode title="Perl" url="BookList.aspx?typeid=26" description="" />
+  <siteMapNode title="WINDOWS" url="BookList.aspx?typeid=35" description="" />
+  <siteMapNode title="电子商务" url="BookList.aspx?typeid=38" description="" />
+  <siteMapNode title="计算机等级考试" url="BookList.aspx?typeid=17" description="" />
+  <siteMapNode title="计算机理论" url="BookList.aspx?typeid=20" description="" />
+  <siteMapNode title="其他" url="BookList.aspx?typeid=28" description="" />
+  <siteMapNode title="网站开发" url="BookList.aspx?typeid=27" description="" />
+</siteMapNode>

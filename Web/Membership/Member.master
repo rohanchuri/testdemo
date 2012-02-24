@@ -1,0 +1,49 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Member.master.cs" Inherits="Membership_Member" %>
+
+<HTML>
+<HEAD runat=server>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<TITLE>用户登录</TITLE>
+<link href="../Style.css" type="text/css" rel="Stylesheet" /> 
+</HEAD>
+<BODY>
+<div id="wrap">
+<FORM id="form1" runat="server">
+<!--网站头部开始-->
+<div class="header">
+       		<div class="logo"><a href="../Default.aspx"><img src="../Images/logo.gif" alt="" title="" border="0" /></a></div>            
+        <div id="menu">
+            <ul>                                                                       
+            <li class="selected"><a href="../Default.aspx">首页</a></li>
+            <li><a href="../BookList.aspx">图书列表页</a></li>
+            <li><a href="../Cart.aspx">我的购物车</a></li>
+            <li><a href="../Membership/userlogin.aspx">用户登录</a></li>
+            <li><a href="../Admin/AdminLogin.aspx">管理员登录</a></li>
+            </ul>
+        </div>     
+            
+            
+       </div>
+<!--网站中间部分开始-->
+<DIV style="padding-left:30px; font-size:13px;line-height:30px;font-weight:bold;">您现在的位置：<asp:SiteMapPath ID="SiteMapPath1" runat="server">
+    </asp:SiteMapPath>
+</DIV>
+<DIV style="padding:15px 0px 15px 0px;">
+<TABLE width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+  <TR>
+    <TD style="height: 14px">
+        <asp:ContentPlaceHolder ID="cphMember" runat="server">
+        </asp:ContentPlaceHolder>
+    </TD>
+  </TR>
+</TABLE>
+</DIV>
+
+</FORM>
+</div>
+</BODY>
+</HTML>
+
+
+        
+     

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~\Default.aspx" title="首页"  description="">    
+		<siteMapNode url="BookList.aspx" title="图书列表页"  description=""/>
+		<siteMapNode url="Search.aspx" title="搜索页"  description=""/>
+		<siteMapNode url="" title="订单查询"  description="" />
+		<siteMapNode url="Cart.aspx" title="购物车"  description="" />
+		<siteMapNode url="~\BookDetail.aspx" title="图书详细页"  description="" />
+		<siteMapNode url="~\Membership\Login.aspx"  title="用户登录"  description="" />
+		<siteMapNode Id="" url="" title="会员后台" description="">
+			<siteMapNode url="~\Membership\UserRegister.aspx"  title="用户注册"  description="" />
+			<siteMapNode url="~\Membership\UserLogin.aspx"  title="用户登录"  description="" />
+			<siteMapNode url="~\Membership\UserModify.aspx" title="修改个人信息"  description="" />
+			<siteMapNode url=""  title="退出登录"  description="" />
+		</siteMapNode>
+
+		<siteMapNode Id="" url="~\Admin\default.aspx" title="管理员后台" description="">
+			<siteMapNode url="" title="用户管理" description="">
+				<siteMapNode url="~\Admin\ListAllUsers.aspx" title="管理用户" description="" />
+				<siteMapNode url="~\Admin\UserStatue.aspx" title="状态管理" description="" />
+				<siteMapNode url="~\Admin\UserDetails.aspx"  title="修改用户资料"  description="" />	
+			</siteMapNode>
+			<siteMapNode url="" title="图书管理" description="">
+				<siteMapNode url="~\Admin\AddBooksCatagory.aspx" title="添加图书分类" description="" />
+				<siteMapNode url="~\Admin\ListBooksByCategory.aspx" title="为书籍分类" description="" />
+				<siteMapNode url="~\Admin\BookDetail.aspx" title="图书详细信息" description="" />
+				<siteMapNode url="~\Admin\ListOfBooks.aspx" title="图书列表页" description="" />
+			</siteMapNode>
+			<siteMapNode url="" title="订单管理" description="">
+				<siteMapNode url="~\Admin\CheckOrders.aspx" title="审核订单" description="" />
+			</siteMapNode>
+			<siteMapNode url="~\Admin\LoginOut.aspx" title="退出" description="管理员退出">
+		</siteMapNode>
+		</siteMapNode>
+	</siteMapNode>	
+</siteMap>

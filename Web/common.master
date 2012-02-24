@@ -1,0 +1,101 @@
+<%@ Master Language="C#" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Search.aspx?KeyWord=" + this.Search.Text);
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<HEAD id="HEAD1" runat="server">
+<%--<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+--%>
+<META http-equiv="Content-Type" content="text/html">
+<TITLE>Book Store</TITLE>
+<link href="Style.css" type="text/css" rel="Stylesheet" /> 
+<script language="javascript">
+    function Search() {
+        keyword = document.getElementById("<% =Search.ClientID%>").value;
+        document.location = "Search.aspx?KeyWord=" + escape(keyword);
+    }
+
+    window.onload = function() {
+        var url = document.location.toString();
+        var array = url.split("KeyWord=")
+        if (array.length > 1)
+            document.getElementById("<% =Search.ClientID%>").value = unescape(array[1]);
+        else
+            document.getElementById("<% =Search.ClientID%>").value = "";
+    }
+</script>
+</HEAD>
+
+<BODY class="search">
+<!--网站头部开始-->
+<div id="wrap">
+<FORM id="form1" runat="server">
+
+<div class="header">
+       		<div class="logo"><a href="Default.aspx"><img src="Images/logo.gif" alt="" title="" border="0" /></a></div>            
+        <div id="menu">
+            <ul>                                                                       
+            <li class="selected"><a href="Default.aspx">首页</a></li>
+            <li><a href="BookList.aspx">图书列表页</a></li>
+            <li><a href="Cart.aspx">我的购物车</a></li>
+            <li><a href="Membership/userlogin.aspx">用户登录</a></li>
+            <li><a href="Admin/AdminLogin.aspx">管理员登录</a></li>
+            </ul>
+        </div>     
+            
+            
+       </div> 
+
+<div style="padding:15px 0px 15px 0px;">
+您现在的位置：<asp:SiteMapPath ID="SiteMapPath1" runat="server">
+    </asp:SiteMapPath>
+<TABLE width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+  <TR>
+  <!--左边菜单栏开始-->
+    <TD class="style1" valign="top"><div>
+        <div class="search">
+        <asp:TextBox ID="Search" runat="server" Width="115px" Height="20px"></asp:TextBox>
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="19px" 
+            ImageUrl="~/Images/Search.jpg" Width="47px"  onclick="ImageButton1_Click" />
+        </div>
+        <IMG src="Images/menu-top.gif"></div>
+	<div class="middle-left1">
+        <asp:TreeView ID="tvStoreClass" runat="server" DataSourceID="XmlDataSource1">
+            <DataBindings>
+                <asp:TreeNodeBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="title" />
+            </DataBindings>
+        </asp:TreeView>
+        <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/TreeView.xml"></asp:XmlDataSource>
+    </div>
+	<div><IMG src="Images/menu-bottom.gif"></div>
+	</TD>
+	<!--右边主要内容开始-->
+    <TD valign="top"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+  <TR>
+    <TD>
+        <asp:ContentPlaceHolder ID="cphContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </TD>
+  </TR>
+</TABLE>
+</TD>
+  </TR>
+</TABLE>
+
+</div>
+<!--网站底部开始-->
+<div align="center"><IMG src="Images/line-1.gif" width="900" height="6"><br>
+</div>
+<DIV class="bcopyright">
+</DIV>
+  </FORM>
+</div>
+
+</BODY>
+</HTML>
